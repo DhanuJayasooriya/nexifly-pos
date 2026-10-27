@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --col-ink: #1a1a2e;
+  --col-ink-2: #16213e;
+  --col-surface: #0f3460;
+  --col-accent: #e94560;
+  --col-accent-2: #f5a623;
+  --col-gold: #f5a623;
+  --col-teal: #00b4d8;
+  --col-green: #06d6a0;
+  --col-red: #ef233c;
+
+  --col-bg: #0d1b2a;
+  --col-bg-2: #1b2838;
+  --col-bg-3: #243447;
+  --col-panel: #1e2d3d;
+  --col-border: rgba(255, 255, 255, 0.08);
+  --col-border-2: rgba(255, 255, 255, 0.15);
+
+  --col-text: #e8eaf0;
+  --col-text-2: #8892a4;
+  --col-text-3: #5a6478;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+
+  --sidebar-w: 220px;
+  --topbar-h: 56px;
+  --transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--col-bg);
+  color: var(--col-text);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--col-border-2);
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--col-accent);
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease both;
+}
+.slide-in {
+  animation: slideIn 0.2s ease both;
+}
+
+.page-enter {
+  animation: fadeIn 0.2s ease both;
+}
