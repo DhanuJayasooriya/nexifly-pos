@@ -114,4 +114,4 @@ This project was built through AI-directed development: I worked as the architec
 
 ## Author
 
-**Duminda Jayasuriya**, Software Engineer · [LinkedIn](https://www.linkedin.com/in/duminda-jayasuriya-386761149)
+**Duminda Jayasuriya**, Software Engineer · [LinkedIn](https://www.linkedin.com/in/duminda-jayasuriya)
